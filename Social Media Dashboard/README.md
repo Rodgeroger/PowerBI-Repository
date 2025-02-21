@@ -33,7 +33,7 @@ This Power BI project visualizes key social media metrics for Instagram, Faceboo
 ![image](https://github.com/user-attachments/assets/6a70e78e-be2e-4b43-a836-0f12b9d54242)
 
 ### Twitter (X) Dashboard Example
-![image](https://github.com/user-attachments/assets/7ac8f06a-c5a5-4936-aa24-68ca6a6ad951)
+![image](https://github.com/user-attachments/assets/b9bef0c0-e3bb-4e13-9de2-d262b971a5b8)
 
 
 
