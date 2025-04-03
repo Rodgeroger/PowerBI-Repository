@@ -43,7 +43,8 @@ This dashboard serves as a powerful tool for **sales optimization, revenue growt
 
 ## **Dashboard**
 
-![Image Alt](image_url)
+- Adidas Dashboard
+![Dashboard](https://github.com/Rodgeroger/PowerBI-Repository/blob/f923d3e1da7e4ac39b56b1a0fa4caaa915b7e951/Adidas%20Sales%20Performance/Adidas%20Dashboard.png)
 ![Image Alt](image_url)
 
 
