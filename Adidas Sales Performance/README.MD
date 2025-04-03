@@ -40,3 +40,7 @@ The dataset consists of extensive sales records across multiple regions. This pr
 - Customer demographic insights are not incorporated, which could provide deeper segmentation strategies.
 
 This dashboard serves as a powerful tool for **sales optimization, revenue growth strategies, and data-driven decision-making** in a competitive shoe market.
+
+## **Dashboard**
+
+"C:\Users\rodri\OneDrive\Pictures\Screenshots\Screenshot 2025-04-02 234748.png"
