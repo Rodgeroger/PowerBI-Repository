@@ -1,4 +1,4 @@
-# **Sales Performance Dashboard**
+# **Adidas Sales Performance Dashboard**
 
 This project analyzes **2.5M+ sales transactions** to uncover key trends, regional performance, and business insights. Using **SQL**, the dataset has been processed to highlight revenue trends, unit sales, and profit margins across different locations and sales channels. The goal is to support **data-driven decision-making** by identifying top-performing regions, sales patterns, and growth opportunities.
 
@@ -43,4 +43,16 @@ This dashboard serves as a powerful tool for **sales optimization, revenue growt
 
 ## **Dashboard**
 
-"C:\Users\rodri\OneDrive\Pictures\Screenshots\Screenshot 2025-04-02 234748.png"
+
+![Alt text](/Users/rodri/OneDrive/Pictures/Screenshots/Screenshot%202025-04-02%20234748.png "Optional title")
+
+
+
+
+
+
+
+
+
+
+
