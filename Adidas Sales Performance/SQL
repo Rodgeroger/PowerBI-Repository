@@ -1,0 +1,138 @@
+-- Total Sales by Retailer
+SELECT 
+    Retailer,
+    SUM(Total_Sales) AS Total_Sales
+FROM 
+    sales_data
+GROUP BY 
+    Retailer
+ORDER BY 
+    Total_Sales DESC;
+
+-- Average Operating Profit by Region
+SELECT 
+    Region,
+    AVG(Operating_Profit) AS Average_Operating_Profit
+FROM 
+    sales_data
+GROUP BY 
+    Region
+ORDER BY 
+    Average_Operating_Profit DESC;
+
+-- Total Units Sold by Product
+SELECT 
+    Product,
+    SUM(Units_Sold) AS Total_Units_Sold
+FROM 
+    sales_data
+GROUP BY 
+    Product
+ORDER BY 
+    Total_Units_Sold DESC;
+
+-- Total Sales and Operating Profit by State
+SELECT 
+    State,
+    SUM(Total_Sales) AS Total_Sales,
+    SUM(Operating_Profit) AS Total_Operating_Profit
+FROM 
+    sales_data
+GROUP BY 
+    State
+ORDER BY 
+    Total_Sales DESC;
+
+-- Sales Method Performance
+SELECT 
+    Sales_Method,
+    SUM(Total_Sales) AS Total_Sales,
+    SUM(Operating_Profit) AS Total_Operating_Profit
+FROM 
+    sales_data
+GROUP BY 
+    Sales_Method
+ORDER BY 
+    Total_Sales DESC;
+
+-- Operating Margin by Retailer
+SELECT 
+    Retailer,
+    SUM(Operating_Profit) / SUM(Total_Sales) AS Operating_Margin
+FROM 
+    sales_data
+GROUP BY 
+    Retailer
+ORDER BY 
+    Operating_Margin DESC;
+
+-- Top 5 Cities by Total Sales
+SELECT 
+    City,
+    SUM(Total_Sales) AS Total_Sales
+FROM 
+    sales_data
+GROUP BY 
+    City
+ORDER BY 
+    Total_Sales DESC
+LIMIT 5;
+
+-- City with the most Total Sales
+SELECT 
+    City,
+    SUM(Total_Sales) AS Total_Sales
+FROM 
+    sales_data
+GROUP BY 
+    City
+ORDER BY 
+    Total_Sales DESC
+LIMIT 1;
+
+-- Price per Unit vs Total Sales
+SELECT 
+    Product,
+    AVG(Price_per_Unit) AS Avg_Price_per_Unit,
+    SUM(Total_Sales) AS Total_Sales
+FROM 
+    sales_data
+GROUP BY 
+    Product
+ORDER BY 
+    Total_Sales DESC;
+
+-- Top 5 Retailers by Operating Profit
+SELECT 
+    Retailer,
+    SUM(Operating_Profit) AS Total_Operating_Profit
+FROM 
+    sales_data
+GROUP BY 
+    Retailer
+ORDER BY 
+    Total_Operating_Profit DESC
+LIMIT 5;
+
+-- Retailer with most Operating Profit
+SELECT 
+    Retailer,
+    SUM(Operating_Profit) AS Total_Operating_Profit
+FROM 
+    sales_data
+GROUP BY 
+    Retailer
+ORDER BY 
+    Total_Operating_Profit DESC
+LIMIT 1;
+
+-- Sales Performance Over Time
+SELECT 
+    DATE_FORMAT(Invoice_Date, '%Y-%m') AS Month,
+    SUM(Total_Sales) AS Monthly_Sales
+FROM 
+    sales_data
+GROUP BY 
+    Month
+ORDER BY 
+    Month;
