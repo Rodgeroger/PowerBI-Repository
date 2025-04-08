@@ -136,3 +136,61 @@ GROUP BY
     Month
 ORDER BY 
     Month;
+
+-- City Sales Compared to Regional Average
+WITH CityRegionSales AS (
+    SELECT 
+        City,
+        Region,
+        SUM(Total_Sales) AS City_Sales
+    FROM 
+        sales_data
+    GROUP BY 
+        City, Region
+),
+RegionAvgSales AS (
+    SELECT 
+        Region,
+        AVG(City_Sales) AS Region_Avg_Sales
+    FROM 
+        CityRegionSales
+    GROUP BY 
+        Region
+)
+SELECT 
+    c.City,
+    c.Region,
+    c.City_Sales,
+    r.Region_Avg_Sales,
+    c.City_Sales - r.Region_Avg_Sales AS Difference_From_Region_Avg
+FROM 
+    CityRegionSales c
+JOIN 
+    RegionAvgSales r ON c.Region = r.Region
+ORDER BY 
+    Difference_From_Region_Avg DESC;
+
+-- Top Product per Region by Total Sales
+WITH ProductSales AS (
+    SELECT 
+        Region,
+        Product,
+        SUM(Total_Sales) AS Total_Sales
+    FROM 
+        sales_data
+    GROUP BY 
+        Region, Product
+),
+RankedProducts AS (
+    SELECT *,
+           RANK() OVER (PARTITION BY Region ORDER BY Total_Sales DESC) AS product_rank
+    FROM ProductSales
+)
+SELECT 
+    Region,
+    Product,
+    Total_Sales
+FROM 
+    RankedProducts
+WHERE 
+    product_rank = 1;
